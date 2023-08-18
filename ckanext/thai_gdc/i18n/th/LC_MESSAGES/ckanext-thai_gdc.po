@@ -243,7 +243,7 @@ msgid "That title is already in use."
 msgstr "ชื่อชุดข้อมูลนี้ถูกใช้แล้ว"
 
 msgid "Name"
-msgstr "ชื่อ"
+msgstr "ชื่อ/หัวข้อ"
 
 msgid "Remove"
 msgstr "ลบ"
