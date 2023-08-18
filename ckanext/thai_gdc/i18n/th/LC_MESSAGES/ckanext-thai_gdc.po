@@ -146,17 +146,8 @@ msgstr "สถิติ"
 msgid "Recently Created Datasets"
 msgstr "ชุดข้อมูลที่มีการสร้างล่าสุด"
 
-msgid "Most Active Organizations"
-msgstr "รายงานประวัติการปรับปรุงการให้บริการ"
-
-msgid "Data Usage by Year"
-msgstr "รายงานประวัติการเรียกใช้ข้อมูล รายปี"
-
-msgid "Data Usage by Month"
-msgstr "รายงานประวัติการเรียกใช้ข้อมูล รายเดือน"
-
-msgid "Data Usage by Day"
-msgstr "รายงานประวัติการเรียกใช้ข้อมูล รายวัน"
+msgid "Recently Updated Datasets"
+msgstr "ชุดข้อมูลที่มีการแก้ไขล่าสุด"
 
 msgid "Number of edits"
 msgstr "จำนวนการแก้ไข"
@@ -250,6 +241,9 @@ msgstr "สร้างโดย"
 
 msgid "That title is already in use."
 msgstr "ชื่อชุดข้อมูลนี้ถูกใช้แล้ว"
+
+msgid "Name"
+msgstr "ชื่อ"
 
 msgid "Remove"
 msgstr "ลบ"

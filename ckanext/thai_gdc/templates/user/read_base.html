@@ -47,7 +47,7 @@
       {% endif %}
       {% endblock %}
       {% block user_nums %}
-      <div class="nums">
+      <!-- <div class="nums">
         <dl>
           <dt>{{ _('Followers') }}</dt>
           <dd data-module="followers-counter" data-module-id="{{ user.id }}" data-module-num_followers="{{ user.num_followers }}">{{ h.SI_number_span(user.num_followers) }}</dd>
@@ -56,13 +56,13 @@
           <dt>{{ _('Datasets') }}</dt>
           <dd>{{ h.SI_number_span(user.number_created_packages) }}</dd>
         </dl>
-      </div>
+      </div> -->
       {% endblock %}
       {% if is_myself == false %}
         {% block user_follow %}
-        <div class="follow_button">
+        <!-- <div class="follow_button">
           {{ h.follow_button('user', user.id) }}</li>
-        </div>
+        </div> -->
         {% endblock %}
       {% endif %}
       {% block user_info %}
