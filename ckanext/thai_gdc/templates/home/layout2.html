@@ -1,3 +1,165 @@
+<meta charset="UTF-8">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+<style>
+.main {
+    min-height: 500px;
+}
+.btn-success {
+    color: #fff;
+    background-color: #ff0101;
+    border-color: #327132;
+}
+.homepage .module-search .module-content{
+width: 677px;
+height: 353px;
+left: 0px;
+top: 0px;
+background: rgba(26, 20, 31, 0.5);
+border-radius: 24px;
+}
+.homepage .module-search .search-giant input
+{
+width: 100%;
+left: 0px;
+top: 54.96%;
+bottom: 31.44%;
+background: #FFFFFF;
+box-shadow: 0px;
+border-radius: 7px;
+}
+.homepage .module-search {
+    padding: 0px;
+    color: #fff;
+    background: #fff0;
+}
+.box {
+    background-color: #fff;
+    border: 0px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.05);
+}
+.homepage .module-search .tags{
+display: none;
+}
+.inner
+{
+display: none;
+}
+
+.search-form .search-input button {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    right: 10px;
+    height: 53.1px;
+    padding: 0;
+    width: 53.5px;
+    border: none;
+    background: #334396;
+    margin-top: -15px;
+    right: 15px;
+
+}
+.search-form .search-input.search-giant button {
+    margin-top: -27px;
+    right: 0px;
+    border-radius: 0 6px 6px 0;
+}
+.homepage .module-search .search-giant {
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}.search-form .search-input.search-giant button {
+    right: 0px;
+}
+.search-form {
+    margin-bottom: 20px;
+    padding-bottom: 25px;
+    border-bottom: 0px dotted #ddd;
+}
+
+.txt-font{
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 150%;
+text-align: center;
+letter-spacing: -0.019em;
+color: #224183;
+}
+
+.color-hr {
+width: 100%;
+height: 0px;
+left: 75px;
+top: 737px;
+border: 1px solid #33439675;
+}
+.module:first-child .module-heading {
+    border-top-width: 0;
+    height: 100%;
+    background: #FFFFFF;
+    border: 1px solid;
+    border-color: #eaeaea;
+    filter: drop-shadow(4px 4px 4px rgba(51, 67, 150, 0.05));
+    border-radius: 15px;
+    background: dfdfdf69;
+}
+.homepage .group-list {
+    margin: 0;
+    height: auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+    border-radius: 13px;
+}
+.module-image {
+    width: 30%;
+    height: 20%;
+}
+.module-image img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+    border-radius: 10px 0 0 10px;
+}
+  .homepage .stats ul li {
+    float: center;
+    width: 33%;
+}
+.box-head-banner{
+  display: none;
+}
+.group-list .module-heading {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.module-narrow .module-heading, .module-narrow .module-content, .module-narrow .module-footer {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.package_count {
+    font-size: 18px;
+    letter-spacing: -0.019em;
+    color: #334396e0;
+
+}
+label[for="field-main-search"] {
+    padding-top: 10%;
+    margin-bottom: 7px;
+    font-size: 24px;
+    line-height: 40px;
+    padding-left: 50px; 
+
+}
+.group-list .module-heading h3 a {
+    font-size: 22px;
+    color: #334396;
+}
+
+</style>
 {% if g.search_background %}
   {% set background = g.search_background %}
 {% else %}
@@ -7,24 +169,32 @@
 <div role="main">
   <div role="main" class="main hero" style="background-image: url('{{ background }}')">
       <div class="container">
-          <div class="row row1">
-            <div class="col-md-6 col1">
-              {% block promoted %}
-                {% snippet 'home/snippets/promoted.html' %}
-              {% endblock %}
-            </div>
-            <div class="col-md-6 col2" style="position: unset;">
+          <div class=""style="display:flex; justify-content: center;">
+            <div class="search-form search-input search-giant button">	
+			
               {% block search %}
                 {% snippet 'home/snippets/search.html' %}
               {% endblock %}
-            </div>
+              {% block stats %}
+                {% snippet 'home/snippets/stats.html' %}
+              {% endblock %}
+            </div>  
+      
           </div>
         </div>
   </div>
+<div class="container">
+<div class="row pt-5" style="padding-top: 57px;">
+  <div class="col-sm-4"><hr class="color-hr" /></div>
+  <div class="col-sm-4 txt-font">กลุ่มข้อมูล</div>
+  <div class="col-sm-4"><hr class="color-hr" /></div>
+</div>
   </div>
+</div>
+
   <div role="main">
     <div class="container">
-      <div class="row row2">
+      <div class="row">
         {% block featured_group %}
         {% set category_dict = h.scheming_group_schemas() %}
         {% if category_dict and category_dict.keys()|length %}
@@ -37,3 +207,54 @@
       </div>
     </div>
   </div>
+<div class="container">
+<div class="row pt-5" style="padding-top: 57px;">
+  	<div class="col-sm-3"><hr class="color-hr" /></div>
+  	<div class="col-sm-6 txt-font">สถิติการเข้าใช้งานข้อมูล</div>
+  	<div class="col-sm-3"><hr class="color-hr" /></div>
+</div>
+</div>
+<div class="container" style="display: flex;justify-content: center;padding-bottom:40px;">
+<canvas id="myChart" style="width:100%;max-width:600px;font-style: normal;"></canvas>
+</div>
+
+<script>
+var xValues = ["ข้อมูลรายงานการจัดอันดับของ...", "ข้อมูลจำนวนสถานพยาบาล MOU", "จำนวนสถานประกอบการ จากสำรวจ", "ร้อยละความครอบคลุมสิทธิในระบบ", "ชุดข้อมูลรายงานจำนวนประชากร"];
+var yValues = [99, 49, 44, 24, 15];
+var barColors = [
+  "#334396",
+  "#7B89C4",
+  "#C5CBE6",
+  "#FEB62F",
+  "#FFE18B"
+];
+
+new Chart("myChart", {
+  type: "doughnut",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: ""
+    },
+	legend: {
+	position:"right",
+	
+ labels: {
+        usePointStyle: true,
+	fontSize:20,
+	fontFamily: "Noto Sans Thai",
+	padding:10
+      }
+}
+
+  }
+});
+</script>
+

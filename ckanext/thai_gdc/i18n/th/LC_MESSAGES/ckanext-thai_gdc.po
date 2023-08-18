@@ -21,7 +21,7 @@ msgstr ""
 "X-Generator: Poedit 2.2.4\n"
 
 msgid "Search data"
-msgstr "ค้นหาชุดข้อมูล"
+msgstr "OPEN DATA"
 
 msgid "Visibility"
 msgstr "การเข้าถึง"
@@ -241,3 +241,9 @@ msgstr "สร้างโดย"
 
 msgid "That title is already in use."
 msgstr "ชื่อชุดข้อมูลนี้ถูกใช้แล้ว"
+
+msgid "Name"
+msgstr "ชื่อ/หัวข้อ"
+
+msgid "Remove"
+msgstr "ลบ"

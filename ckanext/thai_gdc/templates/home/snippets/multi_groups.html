@@ -29,22 +29,6 @@
 }
 }
 </style>
-<h1>กลุ่มชุดข้อมูล (Categories)</h1>
+
 <div class="row seven-cols">
-    {% for category in category_dict.keys()|sort %}
-    <div class="col-md-1">
-      <div class="text-center">
-          <div style="height: 110px;">
-              <a href="/{{category}}">
-                  <img class="imgCategory" src="{{category_dict[category]['group_image_url']}}" alt="{{category_dict[category]['group_title']}}">
-              </a>
-          </div>
-          <div class="mrT15">
-              <a href="/{{category}}" title="{{category_dict[category]['group_title']}}">
-                {{category_dict[category]['group_title']}}
-              </a>
-          </div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
+  </div>  
