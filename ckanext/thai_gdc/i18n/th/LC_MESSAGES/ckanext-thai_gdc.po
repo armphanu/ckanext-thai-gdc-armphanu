@@ -250,3 +250,6 @@ msgstr "สร้างโดย"
 
 msgid "That title is already in use."
 msgstr "ชื่อชุดข้อมูลนี้ถูกใช้แล้ว"
+
+msgid "Remove"
+msgstr "ลบ"
