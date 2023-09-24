@@ -131,16 +131,18 @@
       }
       else if(url.split('dataset')[1] != '/new' && url.includes('new?') != true ) {
         var count = 0;
-        for (let i = 0; i < url.split('dataset')[1].length; i++) {
-            if(url.split('dataset')[1][i] == "/"){
-                count += 1
+        if(url.split('dataset')[1] != undefined){
+            for (let i = 0; i < url.split('dataset')[1].length; i++) {
+                if(url.split('dataset')[1][i] == "/"){
+                    count += 1
+                }
             }
-        }
-        if(count > 1){
-            console.log(url)
-        }else{
-            document.getElementById('logo').innerHTML = 'DSO0103';
-            document.getElementById('divlogo').innerHTML = ' | ';
+            if(count > 1){
+                console.log(url)
+            }else{
+                document.getElementById('logo').innerHTML = 'DSO0103';
+                document.getElementById('divlogo').innerHTML = ' | ';
+            }
         }
       }
   </script>
