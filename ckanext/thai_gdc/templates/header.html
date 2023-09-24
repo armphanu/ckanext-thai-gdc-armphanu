@@ -115,7 +115,7 @@
 {% endblock %}
 
 {% block header_logo %}
-      <a class="logo" href="{{ h.url_for('home.index') }}"><img src="{{ h.url_for_static_or_external(g.site_logo) }}" alt="{{ g.site_tit>
+     <a class="logo" href="{{ h.url_for('home.index') }}"><img src="{{ h.url_for_static_or_external(g.site_logo) }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
      <lable style="color: #f0f2f9;font-size: 29px;padding-left: 1rem;" id="divlogo"></lable>
      <lable  id="logo" style="color:#909399bd; font-size:16px;"></lable>
     <script>
