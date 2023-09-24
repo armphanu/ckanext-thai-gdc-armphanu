@@ -113,3 +113,35 @@
 </li>
   {{ super() }}
 {% endblock %}
+
+{% block header_logo %}
+      <a class="logo" href="{{ h.url_for('home.index') }}"><img src="{{ h.url_for_static_or_external(g.site_logo) }}" alt="{{ g.site_tit>
+     <lable style="color: #f0f2f9;font-size: 29px;padding-left: 1rem;" id="divlogo"></lable>
+     <lable  id="logo" style="color:#909399bd; font-size:16px;"></lable>
+    <script>
+      var url = window.location.href;
+      console.log(url)
+      if(url.split('dataset')[1] == '/') {
+        document.getElementById('logo').innerHTML = 'DSO0102';
+        document.getElementById('divlogo').innerHTML = ' | ';
+      }
+      else if(url.split('opend')[1] == '/') {
+        document.getElementById('logo').innerHTML = 'DSO0101';
+        document.getElementById('divlogo').innerHTML = ' | ';
+      }
+      else if(url.split('dataset')[1] != '/new' && url.includes('new?') != true ) {
+        var count = 0;
+        for (let i = 0; i < url.split('dataset')[1].length; i++) {
+            if(url.split('dataset')[1][i] == "/"){
+                count += 1
+            }
+        }
+        if(count > 1){
+            console.log(url)
+        }else{
+            document.getElementById('logo').innerHTML = 'DSO0103';
+            document.getElementById('divlogo').innerHTML = ' | ';
+        }
+      }
+  </script>
+{% endblock %}
